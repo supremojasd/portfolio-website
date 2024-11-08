@@ -646,7 +646,7 @@ h3.my-profession
     font-size: 18px;
     margin-bottom: 15px;
     text-transform: capitalize;
-    color: var(--text-black-900);
+    color: var(--skin-color);
 
 }
 .about .about-content .timeline .timeline-text
