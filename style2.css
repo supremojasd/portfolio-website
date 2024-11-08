@@ -1019,36 +1019,47 @@ h3.my-profession
     }
     
 }
-@media (max-width:767px)
-{
-   .contact .contact-form .col-6,
-   .contact .contact-info-item,
-   .personal .personal-item,
-   .project .project-item,
-   .about .about-content .experience,
-   .about .about-content .education,
-   .about .about-content .skills,
-   .about .about-content .personal-info
-   {
-      flex: 0 0 100%;
-      max-width: 100%;
-   }
-   .home-img::after,
-  .home-img::before {
-    height: 50px; /* Adjust as needed */
-    width: 50px;
-  }
-
-  .home-img::after {
-    right: 5px;
-    bottom: -25px;
-  }
-
-  .home-img::before {
-    left: 5px;
-    top: -25px;
-  }
-}
+@media (max-width: 767px) {
+    .contact .contact-form .col-6,
+    .contact .contact-info-item,
+    .personal .personal-item,
+    .project .project-item,
+    .about .about-content .experience,
+    .about .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .personal-info {
+       flex: 0 0 100%;
+       max-width: 100%;
+       padding: 10px; /* Added padding for spacing */
+    }
+    
+    .home-img {
+       position: relative;
+       width: 100%; /* Full width for mobile */
+       height: auto; /* Adjust height proportionally */
+    }
+ 
+    .home-img::after,
+    .home-img::before {
+       height: 30px; /* Adjusted height for better scaling */
+       width: 30px;
+       content: '';
+       position: absolute;
+       background-color: rgba(0, 0, 0, 0.1); /* Example background */
+       border-radius: 50%; /* Optional rounded styling */
+    }
+ 
+    .home-img::after {
+       right: 5px;
+       bottom: -15px; /* Adjusted positioning */
+    }
+ 
+    .home-img::before {
+       left: 5px;
+       top: -15px; /* Adjusted positioning */
+    }
+ }
+ 
 @media (max-width:768px)
 {
     .portfolio .container .popup-image img
