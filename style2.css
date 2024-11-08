@@ -496,7 +496,7 @@ h3.my-profession
 .about .about-content .personal-info .info-item p span
 {
     font-weight: 400;
-    color: var(--text-black-700);
+    color: var(--text-black-900);
     margin-left: 4px;
     display: inline-block;
 
@@ -654,7 +654,7 @@ h3.my-profession
     line-height: 25px;
     font-size: 16px;
     text-align: justify;
-    color: var(--text-black-700);
+    color: var(--text-black-900);
     
 }
 /* Portfolio */
