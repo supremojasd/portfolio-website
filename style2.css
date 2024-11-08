@@ -690,11 +690,15 @@ h3.my-profession
 }
 
 .portfolio .portfolio-heading h3 span {
+    margin-bottom: 70px;
     display: block;
     font-size: 20px;
+    line-height: 25px;
     color: var(--skin-color);
     text-align: center;
+    font-weight: 400;
 }
+
 
 /* Image Container */
 .portfolio .container .image-container {
