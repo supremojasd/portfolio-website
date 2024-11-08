@@ -750,11 +750,12 @@ h3.my-profession
 /* Popup Image Overlay */
 .portfolio .container .popup-image {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.9);
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
     z-index: 100;
     display: none;
     align-items: center;
@@ -775,7 +776,7 @@ h3.my-profession
 .portfolio .container .popup-image img {
     border: 5px solid #fff;
     border-radius: 10px;
-    width: 80%;
+    width: 100%;
     max-width: 750px;
     object-fit: cover;
     animation: fadeIn 0.3s ease-in-out;
@@ -1050,6 +1051,10 @@ h3.my-profession
     {
       width: 100%;
       height: auto;
+    }
+    .portfolio .container .popup-image {
+        max-width: 95%;
+        max-height: 85%;
     }
     .portfolio .container .image-container .image .main-row {
         padding: 8px;
