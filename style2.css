@@ -1099,8 +1099,8 @@ h3.my-profession
   }
   .responsive-image{
     margin-top: 20px;
-    height: 55px; /* Adjust as needed */
-    width: 300px;
+    height: 200px; /* Adjust as needed */
+    width: 350px;
 
   }
   .portfolio .portfolio-heading h2 {
