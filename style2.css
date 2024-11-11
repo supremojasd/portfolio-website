@@ -795,62 +795,69 @@ h3.my-profession
     }
 }
 /* CONTACT */
-.contact-title
-{
+.contact-title {
     color: var(--skin-color);
     text-align: center;
     font-size: 25px;
     margin-bottom: 20px;
-
 }
-.contact-sub-title
-{
+
+.contact-sub-title {
     color: var(--text-black-900);
     text-align: center;
     font-size: 15px;
     margin-bottom: 60px;
 }
-.contact .contact-info-item
-{
-    flex: 0 0 25%;
-    max-width: 25%;
+
+/* CONTACT INFO ITEM */
+.contact .contact-info-item {
+    flex: 0 0 20%;  /* Set each item to occupy 25% of the row on large screens */
+    max-width: 20%;
     text-align: center;
     margin-bottom: 60px;
     color: var(--text-black-900);
+    transition: transform 0.3s ease;  /* Smooth transition for hover effects */
 }
-.contact .contact-info-item .icon
-{
-    display: inline-block;
 
+.contact .contact-info-item:hover {
+    transform: translateY(-10px);  /* Lift item slightly on hover for emphasis */
 }
-.contact .contact-info-item  .social i
-{
-    color:#007ced;
-    font-size: 18px;
-    margin-right: 10px;
-    transition: 0.5s;
+
+/* ICON STYLING */
+.contact .contact-info-item .icon,
+.contact .contact-info-item .social {
+    display: inline-block;
+    text-align: center;
 }
-.contact .contact-info-item  .social i:hover
-{
-    color:#504e70;
-    transform: rotate(360deg);
-}
-.contact .contact-info-item .icon .fa
-{
+
+.contact .contact-info-item .icon .fa,
+.contact .contact-info-item .social i {
     font-size: 25px;
     color: var(--skin-color);
-
+    transition: color 0.5s, transform 0.5s;  /* Smooth color and rotation transition */
 }
-.contact .contact-info-item .icon h4
-{
+
+.contact .contact-info-item .social i {
+    color: #007ced;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.contact .contact-info-item .social i:hover {
+    color: #504e70;
+    transform: rotate(360deg);  /* Rotate icons on hover */
+}
+
+/* TEXT STYLING */
+.contact .contact-info-item h4 {
     font-size: 18px;
     font-weight: 700;
     color: var(--text-black-900);
     text-transform: capitalize;
     margin: 15px 0 5px;
 }
-.contact .contact-info-item .icon p 
-{
+
+.contact .contact-info-item p {
     font-size: 16px;
     line-height: 25px;
     color: var(--text-black-900);
@@ -1080,6 +1087,11 @@ h3.my-profession
     .portfolio .container .image-container .image .main-row {
         padding: 8px;
     }
+    .contact .contact-info-item 
+    {
+        flex: 0 0 50%;  /* Adjust to two items per row on smaller screens */
+        max-width: 50%;
+    }
 }
 @media (max-width: 480px) {
   .home-img::after,
@@ -1114,6 +1126,10 @@ h3.my-profession
 .portfolio .container .popup-image img {
     width: 90%;
     max-width: 500px;
+}
+.contact .contact-info-item {
+    flex: 0 0 100%;  /* Stack items vertically on very small screens */
+    max-width: 100%;
 }
 
 }
