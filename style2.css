@@ -401,8 +401,8 @@ h3.my-profession
     left: -5px;
     right: -5px;
     bottom: -5px;
-    background-image: conic-gradient(from var(--angle), transparent 70%, var(--skin-color));
-    border-radius: 30px;
+    background-image: conic-gradient(from var(--angle),  transparent 70%, #21D4FD 0%, #B721FF 100%);
+    border-radius: 10px;
     animation: spin 3s linear infinite;
     z-index: -1;
 }
@@ -421,6 +421,7 @@ h3.my-profession
     margin: auto;
     border-radius: 10px;
     height: 400px; 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
 }
 
 /* Continuous rotation animation for after
@@ -1083,29 +1084,50 @@ h3.my-profession
         max-width: 50%;
     }
     .home-img::before,
-    .home-img::after {
-        top: -5px;
-        left: -5px;
-        right: -5px;
-        bottom: -5px;
-        background-image: conic-gradient(from var(--angle), transparent 70%,var(--skin-color));
+    .home-img::after 
+    {
+        top: 300px;
+        left: -10px;
+        right: 300px;
+        bottom: -20px;
+        background-image: conic-gradient(from var(--angle), transparent 70%, #21D4FD 0%, #B721FF 100%);
     }
+
     .home .home-img img {
         height: 300px; /* Adjust for smaller screens */
+    }
+    .about .about-content .about-text p 
+    { 
+        margin-bottom: 30px; 
+        font-size: 16px;
+        line-height:22px;
+        padding: 0 10px;
+     } 
+     .about .about-content .about-text h3 
+    { 
+        font-size: 24px; 
+        text-align: center; 
+    } 
+    .about .section-title h2 
+    {
+        font-size: 28px; 
+        text-align: center; 
     }
     
 }
 @media (max-width: 480px) {
     .home-img::before,
-    .home-img::after {
+    .home-img::after 
+    {
         top: -5px;
         left: -5px;
         right: -5px;
         bottom: -5px;
-        background-image: conic-gradient(from var(--angle), transparent 70%, var(--skin-color));
-    }
+        background-image: conic-gradient(from var(--angle), transparent 70%, #21D4FD 0%, #B721FF 100%);
 
-    .responsive-image {
+    }
+    .responsive-image 
+    {
         margin-top: 20px;
         height: 200px;
         width: 100%;
