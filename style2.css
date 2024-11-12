@@ -666,14 +666,14 @@ h3.my-profession
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
+    justify-content: justify;
 }
 
 /* Portfolio Heading */
 .portfolio .portfolio-heading {
     flex: 0 0 100%;
     margin-bottom: 40px;
-    text-align: center;
+    text-align: justify;
 }
 
 .portfolio .portfolio-heading h2 {
@@ -682,6 +682,7 @@ h3.my-profession
     font-size: 36px;
     margin-bottom: 10px;
     transition: color 0.3s ease;
+    
 }
 
 .portfolio .portfolio-heading h3 {
