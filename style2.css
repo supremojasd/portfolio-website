@@ -376,8 +376,7 @@ h3.my-profession
     font-size: 20px;
     color: var(--text-black-700);
 }
-.home .home-info .home-img
-{
+.home .home-info .home-img {
     flex: 0 0 40%;
     max-width: 40%;
     text-align: center;
@@ -385,54 +384,57 @@ h3.my-profession
     height: auto;
     display: block;
     margin: 0 auto;
-    position: relative;
+    position: relative;  
+}
 
-    
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }
-/* .home-img::before
-{
+
+.home-img::after, 
+.home-img::before {
     content: '';
     position: absolute;
-    height: 80px;
-    width: 80px;
-    border-top: 10px solid var(--skin-color);
-    border-left: 10px solid var(--skin-color);
-    left: 20px;
-    top: -40px;
-    animation: animateBorder 3s linear infinite;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background-image: conic-gradient(from var(--angle), transparent 70%, var(--skin-color));
+    border-radius: 30px;
+    animation: spin 3s linear infinite;
+    z-index: -1;
 }
-.home-img::after
-{
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-bottom: 10px solid var(--skin-color);
-    border-right: 10px solid var(--skin-color);
-    right: -20px;
-    bottom: -40px;
-    animation: animateBorder 3s linear infinite;
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
 }
-@keyframes animateBorder 
-{
-    0% {
+
+.home .home-img img {
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    height: 400px; 
+}
+
+/* Continuous rotation animation for after
+@keyframes animateBorderAfter {
+    from {
         transform: rotate(0deg);
     }
-    50% {
-        transform: rotate(180deg);
+    to {
+        transform: rotate(-360deg);
     }
-    100% {
-        transform: rotate(360deg);
-    }
-}  */
+} */
 
-.home .home-img img
-{
-    margin: auto;
-    border-radius: 5px;
-    height: 400px;
-    
-}
+
+
 
 /* ABOUT SECTION */
 
@@ -814,7 +816,7 @@ h3.my-profession
     flex: 0 0 20%;  /* Set each item to occupy 25% of the row on large screens */
     max-width: 20%;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     color: var(--text-black-900);
     transition: transform 0.3s ease;  /* Smooth transition for hover effects */
 }
@@ -1030,7 +1032,6 @@ h3.my-profession
         padding: 2rem 3%;
 
     }
-    
 }
 @media (max-width: 767px) {
     .contact .contact-form .col-6,
@@ -1051,17 +1052,6 @@ h3.my-profession
        width: 100%; /* Full width for mobile */
        height: auto; /* Adjust height proportionally */
     }
- 
-    .home-img::after,
-    .home-img::before {
-       height: 30px; /* Adjusted height for better scaling */
-       width: 30px;
-       content: '';
-       position: absolute;
-       background-color: rgba(0, 0, 0, 0.1); /* Example background */
-       border-radius: 50%; /* Optional rounded styling */
-    }
- 
     .home-img::after {
        right: 5px;
        bottom: -15px; /* Adjusted positioning */
@@ -1092,29 +1082,34 @@ h3.my-profession
         flex: 0 0 50%;  /* Adjust to two items per row on smaller screens */
         max-width: 50%;
     }
+    .home-img::before,
+    .home-img::after {
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        background-image: conic-gradient(from var(--angle), transparent 70%,var(--skin-color));
+    }
+    .home .home-img img {
+        height: 300px; /* Adjust for smaller screens */
+    }
+    
 }
 @media (max-width: 480px) {
-  .home-img::after,
-  .home-img::before {
-    height: 10px; /* Adjust as needed */
-    width: 10px;
-  }
+    .home-img::before,
+    .home-img::after {
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        background-image: conic-gradient(from var(--angle), transparent 70%, var(--skin-color));
+    }
 
-  .home-img::after {
-    right: 5px;
-    bottom: -15px;
-  }
-
-  .home-img::before {
-    left: 5px;
-    top: -15px;
-  }
-  .responsive-image{
-    margin-top: 20px;
-    height: 200px; /* Adjust as needed */
-    width: 350px;
-
-  }
+    .responsive-image {
+        margin-top: 20px;
+        height: 200px;
+        width: 100%;
+    }
   .portfolio .portfolio-heading h2 {
     font-size: 28px;
 }
