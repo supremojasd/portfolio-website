@@ -6,7 +6,7 @@ document.querySelector('.logo a').addEventListener('click', function(event) {
 
 /* ===================== TYPING ANIMATION =========================*/
 var typed = new Typed(".typing", {
-    strings: ["Web Developer", "Web Designer", "Graphic Designer"],
+    strings: ["Computer Science Student","Web Developer", "Web Designer",],
     typeSpeed: 100,
     backSpeed: 60, // Corrected case
     loop: true
